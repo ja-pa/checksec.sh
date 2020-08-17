@@ -26,6 +26,6 @@ for i in $(cat linux_executables.txt); do
     echo "File not Found. Keep checksec in same directory and run the script again."
     exit 1
   else
-    ./checksec --file="$i" | tee -a "$2"
+    ./checksec --file="$i" "$3" | tee -a "$2"
   fi
 done
